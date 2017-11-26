@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kayıt Ol</title>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/formplexy-validation.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/formplexy-bootstrap-dark.css">
+  <link rel="stylesheet" href="assets/css/iconfont.css">
+</head>
+
+<body>
+
+  <div class="container formplexy">
+    <div class="row">
+      <div class="col-lg-4 col-lg-push-4 col-md-6 col-md-push-3 col-sm-8 col-sm-push-2 col-xs-12 logo">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-base col-lg-4 col-lg-push-4 col-md-6 col-md-push-3 col-sm-8 col-sm-push-2 col-xs-12">
+        <header>
+          <h1>Kayıt Ol</h1>
+        </header>
+
+        <section>
+          <form action="" method="post" id="signup-form">
+            <div class="clearfix"></div>
+            <div class="input-group signup-name">
+              <div class="input-group-addon">Kullanıcı Adı</div><input type="text" placeholder="Kullanıcı Adı" name="signup-name" id="signup-name"><span aria-hidden="true"
+                id="status-name" class="status-icon"></span></div>
+            <div class="input-group signup-email">
+              <div class="input-group-addon">Email</div><input type="text" placeholder="Email" name="signup-email" id="signup-email"><span aria-hidden="true"
+                id="status-email" class="status-icon"></span></div>
+            <div class="input-group signup-password">
+              <div class="input-group-addon">Parola</div><input type="password" placeholder="Parola" name="signup-password" id="signup-password">
+              <span
+                aria-hidden="true" id="status-password" class="status-icon"></span>
+            </div>
+            <div class="input-group signup-repassword">
+              <div class="input-group-addon">Parola Tekrarı</div><input type="password" placeholder="Parola Tekrarı" name="signup-repassword" id="signup-repassword">
+              <span
+                aria-hidden="true" id="status-repassword" class="status-icon"></span>
+            </div>
+            <div class="input-group">
+              <div class="checkbox-custom">
+                <input type="checkbox" name="signup-agree" id="signup-agree" class="toggle toggle-round">
+                <label for="signup-agree"></label>
+              </div>
+              <label for="signup-agree"><a href="#" data-toggle="modal" data-target="#terms_and_conditions_modal" class="custom-color">Şartlar & Koşulları kabul ediyorum</a></label>
+              <span
+                aria-hidden="true" id="status-agree" class="status-icon"></span>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row section-action">
+              <div class="col-xs-4 pull-right">
+                <button class="btn primary pull-right custom-color-back">Kayıt Ol</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="account-switch col-lg-4 col-lg-push-4 col-md-6 col-md-push-3 col-sm-8 col-sm-push-2 col-xs-12 text-center">
+        <p>Zaten üye misin? <a href="login.html" class="custom-color">Giriş Yap</a></p>
+      </div>
+    </div>
+
+    <div class="modal fade" id="terms_and_conditions_modal" tabindex="-1" role="dialog" aria-labelledby="terms_and_conditions_modal_label"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="terms_and_conditions_modal_label">Terms and conditions</h4>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante ipsum, pellentesque vel velit non, iaculis condimentum
+              orci. Nullam turpis dolor, aliquet elementum mi eget, sagittis pharetra elit. Aenean blandit erat lacus, nec
+              semper ipsum tempus a. Etiam non enim in turpis mollis aliquet. Suspendisse sagittis metus ac nibh venenatis
+              elementum. Curabitur pretium nibh enim, sed fermentum ipsum porta sit amet. Maecenas laoreet finibus est aliquam
+              laoreet. Etiam eros diam, condimentum a placerat ultrices, vestibulum at est. Duis at fringilla ante. Nullam
+              ut est ac risus iaculis porttitor.
+              <br /><br /> Nulla feugiat lorem non nunc fringilla, a interdum dolor egestas. Integer quis semper diam. Mauris
+              quam odio, cursus vel lectus at, mattis sodales neque. Aliquam et arcu mauris. Aliquam dapibus, nulla et consequat
+              dignissim, augue enim efficitur erat, consectetur efficitur ipsum dui sed augue. Sed quis risus massa. Nullam
+              non ex bibendum, tincidunt ipsum id, hendrerit lacus.
+              <br /><br /> Sed id lectus sed mauris dictum auctor feugiat et justo. Cras in neque non sapien cursus lobortis
+              sit amet viverra velit. Nam accumsan, libero at congue consectetur, dolor tortor mattis felis, sed mollis nunc
+              nibh sit amet enim. Aliquam commodo feugiat facilisis. Mauris ullamcorper blandit congue. Nulla in dolor eros.
+              Cras non est aliquet, faucibus diam facilisis, aliquam purus. Quisque varius aliquam odio, vel consectetur
+              orci iaculis eu. Nunc eu gravida diam. Donec semper mauris felis. Donec sit amet tristique enim, sit amet placerat
+              ipsum. Donec facilisis volutpat magna non dictum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+
+</html>

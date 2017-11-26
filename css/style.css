@@ -1,0 +1,347 @@
+    /* body,
+    html {
+        height: 100%;
+    }
+
+    nav.sidebar.navbar {
+        border-radius: 0px;
+    }
+
+    nav.sidebar,
+    .main {
+        -webkit-transition: margin 200ms ease-out;
+        -moz-transition: margin 200ms ease-out;
+        -o-transition: margin 200ms ease-out;
+        transition: margin 200ms ease-out;
+    }
+
+    .main {
+        padding: 10px 10px 0 10px;
+    }
+
+    @media (min-width: 768px) {
+        .main {
+            position: absolute;
+            width: calc(100% - 40px);
+            margin-left: 40px;
+            float: right;
+        }
+        nav.sidebar:hover+.main {
+            margin-left: 200px;
+        }
+        nav.sidebar.navbar.sidebar>.container .navbar-brand,
+        .navbar>.container-fluid .navbar-brand {
+            margin-left: 0px;
+        }
+        nav.sidebar .navbar-brand,
+        nav.sidebar .navbar-header {
+            text-align: center;
+            width: 100%;
+            margin-left: 0px;
+        }
+        nav.sidebar a {
+            padding-right: 13px;
+        }
+        nav.sidebar .navbar-nav>li:first-child {
+            border-top: 1px #e5e5e5 solid;
+        }
+        nav.sidebar .navbar-nav>li {
+            border-bottom: 1px #e5e5e5 solid;
+        }
+        nav.sidebar .navbar-nav .open .dropdown-menu {
+            position: static;
+            float: none;
+            width: auto;
+            margin-top: 0;
+            background-color: transparent;
+            border: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        nav.sidebar .navbar-collapse,
+        nav.sidebar .container-fluid {
+            padding: 0 0px 0 0px;
+        }
+        .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+            color: #777;
+        }
+        nav.sidebar {
+            width: 200px;
+            height: 100%;
+            margin-left: -160px;
+            float: left;
+            z-index: 8000;
+            margin-bottom: 0px;
+        }
+        nav.sidebar li {
+            width: 100%;
+        }
+        nav.sidebar:hover {
+            margin-left: 0px;
+        }
+        .forAnimate {
+            opacity: 0;
+        }
+    }
+
+    @media (min-width: 1330px) {
+        .main {
+            width: calc(100% - 200px);
+            margin-left: 200px;
+        }
+        nav.sidebar {
+            margin-left: 0px;
+            float: left;
+        }
+        nav.sidebar .forAnimate {
+            opacity: 1;
+        }
+    }
+
+    nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover,
+    nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+        color: #CCC;
+        background-color: transparent;
+    }
+
+    nav:hover .forAnimate {
+        opacity: 1;
+    }
+
+    section {
+        padding-left: 15px;
+    }
+
+    .b {
+        padding: 5px 5px 5px 5px;
+        border: 1px solid;
+        color: #000;
+    } */
+    /*** BEGIN FILE EXPLORER CODE ***/
+    /*** BEGIN OPTIONAL styling for box that contains the list ***/
+
+    .menu-tree-container {
+        width: 150px;
+        min-height: 300px;
+        overflow-y: scroll;
+        border-top: 1px solid #000;
+        padding: 10px 10px;
+        position: relative;
+    }
+    /*** END OPTIONAL styling for box that contains the list ***/
+
+    .menu-tree-preloader {
+        width: 50px;
+        top: 45%;
+        position: absolute;
+        left: 50%;
+        margin-left: -16px;
+        display: none;
+        /* Initially set this to not display unless JS is detected*/
+    }
+
+    .menu-tree {
+        /* display:none; Replaced with document.write in HEAD tags. */
+    }
+
+    .menu-tree ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-tree li li {
+        /*background-image: url(page.png);
+    background-position: 0 1px;
+    background-repeat: no-repeat;*/
+        padding-left: 20px;
+    }
+
+    .menu-tree li.folder {
+        /*background-image: url(folder.png);*/
+    }
+
+    .menu-tree a {
+        
+        background: transparent url(../images/folder.png) no-repeat left top;
+        padding: 0px 0 0px 21px;
+        display: block;
+        color: #000000;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .menu-tree a.expanded {
+        background: transparent url(../images/folder_open.png) no-repeat left top;
+    }
+    /*** BEGIN HTML ICON ***/
+
+    .menu-tree a[href$=".html"],
+    .menu-tree a[href^="http"] {
+        background: transparent url(../images/html.png) no-repeat left top;
+    }
+    /*** END HTML ICON ***/
+    /*** BEGIN PDF ICON ***/
+    /* Add PDF icon before links that go to PDFs */
+
+    .menu-tree a[href$=".pdf"] {
+        background: transparent url(../images/pdf.png) no-repeat left top;
+    }
+    /*** END PDF ICON ***/
+    /*** BEGIN WORD ICON ***/
+
+    .menu-tree a[href$=".doc"],
+    .menu-tree a[href$=".docx"] {
+        background: transparent url(../images/doc.gif) no-repeat left top;
+    }
+    /*** END WORD ICON ***/
+    /*** BEGIN PPT ICON ***/
+
+    .menu-tree a[href$=".ppt"],
+    .menu-tree a[href$=".pptx"] {
+        background: transparent url(../images/ppt.png) no-repeat left top;
+    }
+    /*** END PPT ICON ***/
+    /*** BEGIN XLS ICON ***/
+
+    .menu-tree a[href$=".xls"],
+    .menu-tree a[href$=".xlsx"] {
+        background: transparent url(../images/xls.png) no-repeat left top;
+    }
+    /*** END XLS ICON ***/
+    /*** BEGIN TEXT ICON ***/
+
+    .menu-tree a[href$=".txt"] {
+        background: transparent url(../images/txt.png) no-repeat left top;
+    }
+    .menu-tree a[href$=".rar"] {
+        background: transparent url(../images/rar.gif) no-repeat left top;
+    }
+    .menu-tree a[href$=".zip"] {
+        background: transparent url(../images/zip.gif) no-repeat left top;
+    }
+    /*** END TEXT ICON ***/
+    /*** BEGIN IMAGE ICON ***/
+
+    .menu-tree a[href$=".jpg"],
+    .menu-tree a[href$=".jpeg"],
+    .menu-tree a[href$=".png"],
+    .menu-tree a[href$=".gif"] {
+        background: transparent url(../images/picture.png) no-repeat left top;
+    }
+
+     .menu-tree a[href$=".wmv"],
+    .menu-tree a[href$=".avi"],
+    .menu-tree a[href$=".mp4"],
+    .menu-tree a[href$=".mpeg4"] {
+        background: transparent url(../images/wmv.png) no-repeat left top;
+    }
+
+
+
+    /*** END IMAGE ICON ***/
+
+    .menu-tree a:hover {
+        text-decoration: underline;
+        background-color: #ccc;
+    }
+
+    .custom-buttons {
+        border: 1px solid #000;
+        display: inline-block;
+        padding: 2px 2px 2px 2px;
+        cursor: pointer;
+    }
+
+    .rb {
+        max-width: 1100px;
+        margin-left: 300px;
+        margin-top: -600px;
+    }
+
+    .bg {
+        background-color: #333;
+    }
+
+
+    .file-card {
+    margin: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 5px 0 #a2958a;
+    padding: 6px;
+    float: left;
+    text-align: center;
+}
+
+    [type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: button;
+}
+
+
+.btn-kv {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    font-size: 90%;
+    border-radius: .2rem;
+}
+
+.btn-outline-secondary {
+    color: #868e96;
+    background-color: transparent;
+    background-image: none;
+    border-color: #868e96;
+}
+
+.krajee-default.file-preview-frame .file-thumbnail-footer {
+    height: 79px;
+    }
+
+    .krajee-default .file-footer-buttons {
+    float: right;
+    padding-top:4px;    
+}
+
+    .krajee-default .file-footer-caption {
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 11px;
+    color: #777;
+    padding-top
+   
+}
+.krajee-default.file-preview-frame {
+    margin: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 5px 0 #a2958a;
+    padding: 6px;
+    float: left;
+    text-align: center;
+    max-height:181;
+    }
+
+    .krajee-default.file-preview-frame .kv-file-content {
+    width: 178px;
+    height: 102px;
+}
+.file-preview .fileinput-remove {
+    top: 1px;
+    right: 1px;
+    line-height: 10px;
+}
+
+input[value="1"]{
+  display:none;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
